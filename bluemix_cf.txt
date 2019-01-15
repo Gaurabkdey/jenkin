@@ -1,0 +1,81 @@
+step 1:
+bluemix login --sso
+
+step 2:
+select space
+
+step 3: (if space not selected then)
+bluemix target --cf-api https://api.ng.bluemix.net -r us-south -o 'Global Spanish Blockchain Best' -s BlockchainTEF
+
+step 4:
+bluemix app push teleservice
+
+{
+"args": [
+"\n[{\"incomingRoute\":\"AR1BU5D\",\"outgoingRoute\":\"USHA41\",\"aSubscriberNumber\":\"9999999890\",\"bSubscriberNumber\":\"7778882291\",\"dateForStartOfCharging\":\"180821\",\"timeForStartOfCharging\":\"000617\",\"chargeableDuration\":\"002010\",\"recordSequenceNumber\":\"7e2caa\"}]\n"
+],
+"chainId": "defaultchannel",
+"chaincodeId": "TELEFONICA",
+"fcn": "loadCDRS",
+"userName": "OperatorA"
+}
+
+//telefonicaservice.mybluemix.net/
+=========================================================================================
+
+OperatorA
+{
+"args": [
+"\n[{\"incomingRoute\":\"GBBDA9I\",\"outgoingRoute\":\"EP1OM9B\",\"aSubscriberNumber\":\"9187654401\",\"bSubscriberNumber\":\"9187654402\",\"dateForStartOfCharging\":\"180908\",\"timeForStartOfCharging\":\"140025\",\"chargeableDuration\":\"00102010\",\"recordSequenceNumber\":\"7b24AA\"}]\n"
+],
+"chainId": "defaultchannel",
+"chaincodeId": "TELEFONICA",
+"fcn": "loadCDRS",
+"userName": "OperatorA"
+}
+
+=============================================================
+
+====================================================================
+OperatorB
+{
+"args": [
+"\n[{\"incomingRoute\":\"GBBDA9I\",\"outgoingRoute\":\"EP1OM9B\",\"aSubscriberNumber\":\"9187654401\",\"bSubscriberNumber\":\"9187654402\",\"dateForStartOfCharging\":\"180908\",\"timeForStartOfCharging\":\"140025\",\"chargeableDuration\":\"00102010\",\"recordSequenceNumber\":\"7b24BB\"}]\n"
+],
+"chainId": "defaultchannel",
+"chaincodeId": "TELEFONICA",
+"fcn": "loadCDRS",
+"userName": "OperatorB"
+}
+
+==================================================================
+
+================================================================================
+
+CarrierA
+{
+"args": [
+"\n[{\"incomingRoute\":\"GBBDA9I\",\"outgoingRoute\":\"EP1OM9B\",\"aSubscriberNumber\":\"9187654401\",\"bSubscriberNumber\":\"9187654402\",\"dateForStartOfCharging\":\"180908\",\"timeForStartOfCharging\":\"140025\",\"chargeableDuration\":\"00102010\",\"recordSequenceNumber\":\"7b24CC\"}]\n"
+],
+"chainId": "defaultchannel",
+"chaincodeId": "TELEFONICA",
+"fcn": "loadCDRS",
+"userName": "CarrierA"
+}
+
+===================================================================================
+
+=================================================================================
+CarrierB
+{
+"args": [
+"\n[{\"incomingRoute\":\"GBBDA9I\",\"outgoingRoute\":\"EP1OM9B\",\"aSubscriberNumber\":\"9187654401\",\"bSubscriberNumber\":\"9187654402\",\"dateForStartOfCharging\":\"180908\",\"timeForStartOfCharging\":\"140025\",\"chargeableDuration\":\"00102010\",\"recordSequenceNumber\":\"7b24DD\"}]\n"
+],
+"chainId": "defaultchannel",
+"chaincodeId": "TELEFONICA",
+"fcn": "loadCDRS",
+"userName": "CarrierB"
+}
+
+=================================================================================
+
